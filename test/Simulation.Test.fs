@@ -403,3 +403,5 @@ let tests = testList "Simulation tests" [
     keepSameStrategyTests
     highestEuTests
 ]
+
+Mocha.runTests tests |> ignore

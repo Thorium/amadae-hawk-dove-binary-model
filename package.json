@@ -11,8 +11,8 @@
     "build": "webpack",
     "build:ghPages": "webpack --env ghPages --env prod",
     "deploy": "gh-pages -d dist",
-    "test": "dotnet fable test -o output --run mocha output/Main.js",
-    "watch-test": "dotnet fable watch test -o output"
+    "test": "webpack --config webpack.test.config.js && mocha output/tests.js",
+    "watch-test": "webpack --watch --config webpack.test.config.js"
   },
   "dependencies": {
     "bulma": "^0.8.2",
@@ -24,7 +24,9 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "copy-webpack-plugin": "^6.3.1",
+    "fable-compiler": "^2.13.0",
     "fable-loader": "^2.1.8",
+    "fable-splitter": "^2.2.1",
     "gh-pages": "^3.1.0",
     "glob-parent": ">=5.1.2",
     "mocha": "^9.2.0",

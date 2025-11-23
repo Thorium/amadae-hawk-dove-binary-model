@@ -28,3 +28,5 @@ let tests = testList "Model tests" [
     colorTests
     strategyTests
 ]
+
+Mocha.runTests tests |> ignore

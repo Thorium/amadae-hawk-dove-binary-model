@@ -18,3 +18,5 @@ let tests = testList "Helpers test" [
         Expect.equal input.Length result.Length "shuffled array should have same length"
         Expect.notEqual input result "shuffled array should be different from original"
 ]
+
+Mocha.runTests tests |> ignore
